@@ -40,3 +40,11 @@ for i in range(n):
     c = a + b
     a = b
     b = c
+
+# 九九乘法表
+
+for i in range(1, 10):
+    for j in range(1, 10):
+        result = i*j
+        print(i, "*", j, "=", result, end=" ")
+    print("\n")
