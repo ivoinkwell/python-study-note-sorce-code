@@ -1,45 +1,45 @@
-# i = 0
-# j = 0
+i = 0
+j = 0
 
-# # While语句
-# while i < 100:
-#     print("Hello")
-#     i += 1
+# While语句
+while i < 100:
+    print("Hello")
+    i += 1
 
-# # 输出 1+……+100
-# while i < 100:
-#     i += 1
-#     j += i
-# print(j)
+# 输出 1+……+100
+while i < 100:
+    i += 1
+    j += i
+print(j)
 
-# for i in range(1, 101):
-#     j += i
-# print(j)
+for i in range(1, 101):
+    j += i
+print(j)
 
-# # for 循环
+# for 循环
 
-# # 步长
-# # for a in range(1, 10, -1):
-# #     print("a = ", a)
-
-# for a in range(1, 10):
+# 步长
+# for a in range(1, 10, -1):
 #     print("a = ", a)
 
-# for a in range(4):
-#     print("Hello")
+for a in range(1, 10):
+    print("a = ", a)
 
-# # 斐波那契数列
-# n = int(input("请输入n: "))
+for a in range(4):
+    print("Hello")
 
-# a = 0
-# b = 1
+# 斐波那契数列
+n = int(input("请输入n: "))
 
-# for i in range(n):
-#     print(a)
+a = 0
+b = 1
 
-#     c = a + b
-#     a = b
-#     b = c
+for i in range(n):
+    print(a)
+
+    c = a + b
+    a = b
+    b = c
 
 # 九九乘法表
 
@@ -48,3 +48,45 @@ for i in range(1, 10):
         result = i*j
         print(f"{i}*{j}={result}", end=" ")
     print("\n")
+
+# 猜数字游戏
+
+import random
+answer = random.randint(1, 100)
+count = 0
+
+success = False
+
+# for 循环
+for i in range(5):
+    userInput = int(input("请输入你猜的数字："))
+    if userInput == answer:
+        print("猜对了")
+        success = True
+        break
+    elif userInput > answer:
+        print("大了")
+    else:
+        print("小了")
+
+if not success:
+    print("正确答案：", answer)
+
+# while 循环
+while count < 5:
+    userInput = int(input("请输入你猜的数字："))
+
+    if userInput == answer:
+        print("猜对了")
+        break
+
+    elif userInput > answer:
+        print("大了")
+
+    else:
+        print("小了")
+
+    count += 1
+
+if count == 5:
+    print("正确答案：", answer)
