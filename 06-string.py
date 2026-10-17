@@ -25,3 +25,19 @@ print("姓名是：{name}, 年龄是：{age}".format(age=age, name=name))
 # f-string
 
 print(f"姓名是：{name}, 年龄是：{age}")
+
+# .islower()
+
+s = 'AbcDeFGhIJ'
+count = 0
+for ch in s:
+    if ch.islower():   # 字符串方法：判断是否小写字母
+        count += 1
+print(count)
+
+# .replace()
+
+s = "Life is short. I use python"
+if "python" in s:              # in：检查子串是否存在
+    s = s.replace("python", "Python")  # 字符串方法：替换子串
+print(s)
