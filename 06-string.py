@@ -6,7 +6,7 @@ formatted output demo
 
 '''
 
-# printf-stylr formatting
+# printf-style formatting
 
 name = 'ivoinkwell'
 age = 17
@@ -41,3 +41,17 @@ s = "Life is short. I use python"
 if "python" in s:              # in：检查子串是否存在
     s = s.replace("python", "Python")  # 字符串方法：替换子串
 print(s)
+
+# 水仙花数
+
+number = input("请输入一个数字: ")
+
+total = 0
+
+for i in number:
+    total += int(i)**3
+
+if total != int(number):
+    print(f"{number}不是水仙花数")
+else:
+    print(f"{number}是水仙花数")
